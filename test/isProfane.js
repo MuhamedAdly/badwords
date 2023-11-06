@@ -9,6 +9,10 @@ describe('filter', function(){
 			assert(filter.isProfane("ash0le"));
 		});
 
+		it("Should detect a bad arabic word and return a boolean value",function(){
+			assert(filter.isProfane("عرص"));
+		});
+
 		it("Should return false when no bad word is detected",function(){
 			assert(filter.isProfane("wife") === false);
 		});
